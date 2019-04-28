@@ -50,7 +50,7 @@
 		switch(currentAction) {
 
 			case 'contact' : {
-				Phone.open('contact-action-message', {name: 'Banque', number: 'banker'});
+				Phone.open('contact-action-message', {name: 'Banco', number: 'banker'});
 				break;
 			}
 
