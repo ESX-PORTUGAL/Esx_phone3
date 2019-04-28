@@ -399,7 +399,7 @@ RegisterNUICallback('bank_transfer', function(data, cb)
   if amount ~= nil then
     TriggerServerEvent('esx_phone:bankTransfer', data.player, amount)
   else
-    ESX.ShowNotification('Montant invalide')
+    ESX.ShowNotification('Montante Invalido')
   end
 
 end)
@@ -477,7 +477,7 @@ Citizen.CreateThread(function()
       DisableControlAction(0, 17,   true) -- Select Prev Weapon
     else
 
-      if IsDisabledControlJustReleased(0, Keys['1']) then
+      if IsDisabledControlJustReleased(0, Keys['F1']) then
 
         if not GUI.IsOpen then
           ESX.UI.Menu.CloseAll()
@@ -486,7 +486,7 @@ Citizen.CreateThread(function()
 
       end
 
-      if IsControlJustReleased(0, Keys['U']) and GUI.IsOpen then
+      if IsControlJustReleased(0, Keys['F10']) and GUI.IsOpen then
         
         SendNUIMessage({
           activateGPS = true
