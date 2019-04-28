@@ -351,7 +351,7 @@ RegisterNUICallback('add_contact', function(data, cb)
   end
 
   cb('OK')
-
+  ESX.UI.Menu.Close('phone', GetCurrentResourceName(), 'main')
 end)
 
 RegisterNUICallback('escape', function()
