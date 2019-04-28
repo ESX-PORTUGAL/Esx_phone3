@@ -396,11 +396,11 @@ AddEventHandler('esx_phone:billCall', function(duration)
 
   local _source = source
   local xPlayer = ESX.GetPlayerFromId(_source)
-  local amount  = math.floor(duration * 0.34)
+  local amount  = math.floor(duration * 0.10)
 
   xPlayer.removeAccountMoney('bank', amount)
 
-  TriggerClientEvent('esx:showNotification', _source, 'A tua ligação custa ~r~$' .. amount .. '~s~')
+  TriggerClientEvent('esx:showNotification', _source, 'A tua ligação custou ~r~$' .. amount .. '~s~')
 
 end)
 
