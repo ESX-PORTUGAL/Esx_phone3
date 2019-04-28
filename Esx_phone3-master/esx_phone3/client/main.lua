@@ -153,7 +153,7 @@ RegisterNetEvent('esx_phone:onMessage')
 AddEventHandler('esx_phone:onMessage', function(phoneNumber, message, position, anon, job, dispatchRequestId)
 
   if job == 'player' then
-    ESX.ShowNotification('~b~Nouveau message~s~ : ' .. message)
+    ESX.ShowNotification('~b~Nova Mensagem~s~ : ' .. message)
     PlaySound(-1, "Menu_Accept", "Phone_SoundSet_Default", 0, 0, 1)
     Citizen.Wait(250)
     PlaySound(-1, "Menu_Accept", "Phone_SoundSet_Default", 0, 0, 1)
@@ -297,7 +297,7 @@ end)
 
 RegisterNUICallback('activate_gps', function(data)
   SetNewWaypoint(data.x, data.y)
-  ESX.ShowNotification('Position entrée dans le GPS')
+  ESX.ShowNotification('Posição inserida no GPS')
 end)
 
 RegisterNUICallback('start_call', function(data, cb)
@@ -337,7 +337,7 @@ RegisterNUICallback('send', function(data)
     z = coords.z
   })
 
-  ESX.ShowNotification('Message envoyé')
+  ESX.ShowNotification('Mensagem enviada!')
 
 end)
 
