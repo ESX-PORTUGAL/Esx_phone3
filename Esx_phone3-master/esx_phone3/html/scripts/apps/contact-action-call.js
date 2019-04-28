@@ -19,7 +19,7 @@
 		if(elems.length > 0)
 			app.selectElem(elems[0]);
 
-		$('#app-contact-action-call .loader .info').text('Appel en cours');
+		$('#app-contact-action-call .loader .info').text('Chamada em curso');
 		$('#app-contact-action-call').removeClass('online');
 		$('#app-contact-action-call .contact-name')  .text(contact.name);
 		$('#app-contact-action-call .contact-number').text(contact.number);
