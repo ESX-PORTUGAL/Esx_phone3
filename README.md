@@ -18,4 +18,6 @@
 
 # Alguns Updates e Traducoes
 
-# Agradecimento a https://github.com/nunokisc Pela Sua ajuda Nos Updates!
+# Numeros Comecam Por 91
+
+# Agradecimento a https://github.com/nunokisc Pela Sua Contribuicao Nos Updates!
