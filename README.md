@@ -10,7 +10,7 @@
 
 #Traduzido Para PT
 
-#Numeros Comecam Pr 91
+#Numeros Comecam Por 91
 
 #Sql Incluido
 
