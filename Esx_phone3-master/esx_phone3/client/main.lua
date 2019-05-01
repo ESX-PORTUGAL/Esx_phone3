@@ -297,7 +297,7 @@ end)
 
 RegisterNUICallback('activate_gps', function(data)
   SetNewWaypoint(data.x, data.y)
-  ESX.ShowNotification('Position entrée dans le GPS')
+  ESX.ShowNotification('Posição inserida no GPS')
 end)
 
 RegisterNUICallback('start_call', function(data, cb)
@@ -337,7 +337,7 @@ RegisterNUICallback('send', function(data)
     z = coords.z
   })
 
-  ESX.ShowNotification('Message envoyé')
+  ESX.ShowNotification('Mensagem Enviada')
 
 end)
 
@@ -400,7 +400,7 @@ RegisterNUICallback('bank_transfer', function(data, cb)
   if amount ~= nil then
     TriggerServerEvent('esx_phone:bankTransfer', data.player, amount)
   else
-    ESX.ShowNotification('Montante invalide')
+    ESX.ShowNotification('Montante invalido')
   end
 
 end)
