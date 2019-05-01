@@ -180,7 +180,7 @@ AddEventHandler('esx_phone:onMessage', function(phoneNumber, message, position, 
   if dispatchRequestId then
 
     CurrentAction            = 'dispatch'
-    CurrentActionMsg         = job .. ' - Appuyez sur ~INPUT_CONTEXT~ pour prendre l\'appel'
+    CurrentActionMsg         = job .. ' - Carregue no ~INPUT_CONTEXT~ para aceitar o pedido'
     CurrentDispatchRequestId = dispatchRequestId
 
     CurrentActionData = {
