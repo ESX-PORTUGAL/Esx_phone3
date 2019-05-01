@@ -1,12 +1,10 @@
 # Esx_phone3
 
-#Totalmente Funcional.
+# Faz E recebe Chamadas Envia Sms E Recebe
 
-# Faz E recebe Chamadas Envia Sms E Recebe.
+# Recebe Notificacoes da Policia Ambulance e Etc
 
-# Recebe Notificacoes da Policia Ambulance e Etc.
-
-#Executa Transferencias Bancarias Tb.
+#Executa Transferencias Bancarias
 
 #Traduzido Para PT
 
