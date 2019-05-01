@@ -13,7 +13,8 @@ function GenerateUniquePhoneNumber()
 
   while not foundNumber do
 
-    phoneNumber = math.random(10000, 99999)
+    math.randomseed(GetGameTimer())
+		phoneNumber = "91" .. math.random(0000000, 9999999)
 
     local result = MySQL.Sync.fetchAll(
       'SELECT COUNT(*) as count FROM users WHERE phone_number = @phoneNumber',
@@ -100,7 +101,7 @@ AddEventHandler('esx_phone:startCall', function(number)
     TriggerClientEvent('esx_phone:incomingCall', foundPlayer.source, xPlayer.source, channel, xPlayer.get('phoneNumber'))
  
   else
-    TriggerClientEvent('esx_phone:endCall', _source, 'Le contact est hors-ligne')
+    TriggerClientEvent('esx_phone:endCall', _source, 'O contacto está offline')
   end
 
 
@@ -335,7 +336,7 @@ AddEventHandler('esx_phone:addPlayerContact', function(phoneNumber, contactName)
       if foundNumber then
 
         if phoneNumber == xPlayer.get('phoneNumber') then
-          TriggerClientEvent('esx:showNotification', _source, 'Vous ne pouvez pas vous ajouter vous-même')
+          TriggerClientEvent('esx:showNotification', _source, 'Não te podes adicionar a ti proprio')
         else
 
           local hasAlreadyAdded = false
@@ -348,7 +349,7 @@ AddEventHandler('esx_phone:addPlayerContact', function(phoneNumber, contactName)
           end
 
           if hasAlreadyAdded then
-            TriggerClientEvent('esx:showNotification', _source, 'Ce contact est déja dans votre répertoire')
+            TriggerClientEvent('esx:showNotification', _source, 'Já tens este numero nos teus contactos')
           else
 
             table.insert(contacts, {
@@ -367,7 +368,7 @@ AddEventHandler('esx_phone:addPlayerContact', function(phoneNumber, contactName)
               },
               function(rowsChanged)
 
-                TriggerClientEvent('esx:showNotification', _source, 'Contact ajouté')
+                TriggerClientEvent('esx:showNotification', _source, 'Contato adicionado')
 
                 TriggerClientEvent('esx_phone:addContact', _source, contactName, phoneNumber)
               end
@@ -377,7 +378,7 @@ AddEventHandler('esx_phone:addPlayerContact', function(phoneNumber, contactName)
         end
 
       else
-        TriggerClientEvent('esx:showNotification', source, 'Ce numéro est inexistant')
+        TriggerClientEvent('esx:showNotification', source, 'Este numero não existe')
       end
 
     end
@@ -399,7 +400,7 @@ AddEventHandler('esx_phone:billCall', function(duration)
 
   xPlayer.removeAccountMoney('bank', amount)
 
-  TriggerClientEvent('esx:showNotification', _source, 'Votre appel vous a coûté ~r~$' .. amount .. '~s~')
+  TriggerClientEvent('esx:showNotification', _source, 'A tua ligação custa ~r~$' .. amount .. '~s~')
 
 end)
 
@@ -415,10 +416,10 @@ AddEventHandler('esx_phone:bankTransfer', function(target, amount)
     xPlayer      .removeAccountMoney('bank', amount)
     targetXPlayer.addAccountMoney   ('bank', amount)
 
-    TriggerClientEvent('esx:showNotification', _source, 'Vous avez viré ~g~$' .. amount .. '~s~ à ' .. targetXPlayer.name)
+    TriggerClientEvent('esx:showNotification', _source, 'Tu transferiste ~g~$' .. amount .. '~s~ à ' .. targetXPlayer.name)
 
   else
-    TriggerClientEvent('esx:showNotification', _source, 'Montant invalide')
+    TriggerClientEvent('esx:showNotification', _source, 'Montante Invalido')
   end
 
 end)
