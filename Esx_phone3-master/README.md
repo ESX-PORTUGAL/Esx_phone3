@@ -8,9 +8,9 @@
 
 #Executa Transferencias Bancarias Tb.
 
-#Nao Esta Traduzido Em [PT]. 
+#Traduzido Para PT
 
-#Personalizavel ao seu Gosto.
+#Numeros Comecam Por 91
 
 #Sql Incluido
 
