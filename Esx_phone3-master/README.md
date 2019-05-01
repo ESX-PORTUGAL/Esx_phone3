@@ -15,3 +15,7 @@
 #Sql Incluido
 
 # Creditos Para Seu Criador
+
+# Alguns Updates e Traducoes
+
+# Agradecimento a https://github.com/nunokisc Pela Sua ajuda Nos Updates!
